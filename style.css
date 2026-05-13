@@ -118,42 +118,45 @@ h2, h3 {
 
 @media (max-width: 768px) {
     header {
-        flex-direction: column;
-        padding: 15px 2%;
-        gap: 10px;
+        display: block; /* لغينا الـ flex خالص هنا */
+        text-align: center;
+        padding: 15px 0;
     }
 
     header .logo {
-        font-size: 1.2rem;
-        text-align: center;
+        display: block;
+        margin-bottom: 15px;
+        font-size: 1.3rem;
     }
 
     nav ul {
         display: flex;
-        flex-wrap: wrap; /* عشان اللينكات تنزل تحت بعض لو الشاشة صغيرة جداً */
+        flex-wrap: wrap;
         justify-content: center;
         gap: 10px;
         padding: 0;
+        margin: 0;
+    }
+
+    nav ul li {
+        display: inline-block;
     }
 
     nav ul li a {
         font-size: 0.85rem;
-        padding: 5px 8px;
+        padding: 5px 10px;
+        border: 1px solid var(--glass-border); /* برواز خفيف يحدد كل زرار */
+        border-radius: 5px;
     }
 
     .container {
-        padding: 30px 4%;
+        padding: 20px 5%;
     }
 
     .card {
+        width: 95%;
+        margin: 10px auto;
         padding: 20px;
-        width: 90%; 
-        margin: 0 auto;
-    }
-
-    .about-image img {
-        width: 120px;
-        height: 120px;
     }
 }
 

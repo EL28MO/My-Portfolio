@@ -152,3 +152,9 @@ footer {
     padding: 40px;
     color: var(--text-gray);
 }
+.contact-info p {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-all;
+    max-width: 100%;
+}

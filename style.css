@@ -169,21 +169,22 @@ footer {
 .email-link:hover {
     text-shadow: 0 0 8px var(--accent-cyan);
 }
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     header {
-        flex-direction: column;
-        gap: 15px;
-        padding: 15px;
-        text-align: center;
+        flex-direction: column !important;
+        height: auto !important;
+        padding: 15px !important;
     }
 
     nav ul {
-        gap: 15px;
-        justify-content: center;
-        padding: 0;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 10px !important;
+        margin-top: 10px !important;
     }
 
-    nav ul li a {
-        font-size: 14px;
+    .container {
+        padding: 20px 5% !important;
     }
 }

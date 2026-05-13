@@ -1,11 +1,3 @@
-:root {
-    --main-bg: #0b111a;
-    --accent-cyan: #00f2ff;
-    --text-white: #ffffff;
-    --text-gray: #ccd6f6;
-    --glass-border: rgba(255, 255, 255, 0.1);
-}
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -13,122 +5,76 @@
 }
 
 body {
-    background: linear-gradient(rgba(11, 17, 26, 0.9), rgba(11, 17, 26, 0.9)), 
-                url('background-blurred.jpg') center/cover no-repeat fixed;
-    background-color: var(--main-bg);
-    color: var(--text-white);
-    font-family: 'Segoe UI', sans-serif;
+    background: #0b111a;
+    color: #ffffff;
+    font-family: sans-serif;
 }
 
 header {
-    background: rgba(11, 17, 26, 0.95);
-    backdrop-filter: blur(10px);
-    padding: 15px 5%;
+    background: #0b111a;
+    padding: 15px;
+    border-bottom: 1px solid #00f2ff;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    border-bottom: 1px solid var(--glass-border);
 }
 
 header .logo {
-    color: var(--accent-cyan);
-    font-size: 1.4rem;
+    color: #00f2ff;
     font-weight: bold;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 15px;
 }
 
 nav ul li a {
-    color: var(--text-white);
+    color: #ffffff;
     text-decoration: none;
-    font-weight: bold;
-    font-size: 0.95rem;
-}
-
-nav ul li a.active, nav ul li a:hover {
-    color: var(--accent-cyan);
+    font-size: 14px;
 }
 
 .container {
-    padding: 40px 5%;
-    max-width: 1200px;
-    margin: 0 auto;
+    padding: 20px;
     text-align: center;
 }
 
-h2 {
-    color: var(--accent-cyan);
-    margin-bottom: 30px;
-}
-
 .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
 }
 
 .card {
-    background: rgba(255, 255, 255, 0.03);
-    backdrop-filter: blur(10px);
-    border-radius: 15px;
-    padding: 25px;
-    border: 1px solid var(--glass-border);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: 0.3s;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid #00f2ff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    max-width: 350px;
 }
 
-.card:hover {
-    border-color: var(--accent-cyan);
-    transform: translateY(-5px);
+.card h3 { color: #00f2ff; margin-bottom: 10px; }
+.card p { font-size: 14px; margin-bottom: 15px; color: #ccd6f6; }
+.card a { color: #00f2ff; border: 1px solid #00f2ff; padding: 5px 15px; text-decoration: none; border-radius: 5px; }
+
+@media (min-width: 768px) {
+    .projects-grid {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 }
 
-.card h3 {
-    color: var(--accent-cyan);
-    margin: 15px 0 10px;
-}
-
-.card p {
-    color: var(--text-gray);
-    font-size: 0.9rem;
-    margin-bottom: 20px;
-}
-
-.card a {
-    color: var(--accent-cyan);
-    text-decoration: none;
-    font-weight: bold;
-    border: 1px solid var(--accent-cyan);
-    padding: 8px 20px;
-    border-radius: 5px;
-}
-
-/* 📱 ضبط الموبايل الحاسم */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
     header {
         flex-direction: column;
-        gap: 15px;
+        gap: 10px;
     }
-
     nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-    }
-
-    .container {
-        padding: 30px 5%;
-    }
-
-    .projects-grid {
-        grid-template-columns: 1fr; /* كارت واحد بالعرض في الموبايل */
+        gap: 10px;
     }
 }

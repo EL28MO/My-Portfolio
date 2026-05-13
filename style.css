@@ -158,3 +158,14 @@ footer {
     word-break: break-all;
     max-width: 100%;
 }
+.email-link {
+    color: var(--accent-cyan);
+    text-decoration: none;
+    word-break: break-all;
+    display: inline-block;
+    max-width: 100%;
+}
+
+.email-link:hover {
+    text-shadow: 0 0 8px var(--accent-cyan);
+}
